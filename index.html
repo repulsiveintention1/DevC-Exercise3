@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Exercise 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht, initial-scaled=1.0">
+    <meta http-equiv="X-UA-Commpatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css"/>
+    <title> document </title>
 </head>
 <body>
-    <center>
-        <h1>Daftar Planet</h1>
-    </center>
+    <input id="filter" type="text" placeholder="filter here" />
+    <button id="button" onclick="my Filter()"></button>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+
+
+    function getTag(parrent, tag) {
+        return parent.getElemmentsByTagName(tag)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getId(id) {
+        return document.getElementById(id)
+    }
+
+    function append{parent, el} {
+        return parent.appendChild(el);
+    }
+
+    function createNote(Element) {
+        return document.createElement(element);
+    }
+
+    var tbody= getId('tbody')
+
+    fetch('https://swapi.co/api/people/')
+        then( (d) => d.json())
+        then( (people) =>{
+            const { result } =  poeple 
+            for (var 1 = 0; 1 < results,lenght; 1++) {
+                const { name, height, mass } = results(i)
+                var tr = createNote('tr')
+                tr.setAttribute('id', i)
+                tbody.appendChild(tr)
+            for(var y = 0; y < 2; y++) {
+                var abc = getId(i)
+                const key = [name, height]
+                var td = create.Note('td')
+                var textNode = document.createTextNode(key[y]);
+                td.appendChild(textnode);
+                abc.appendChild(td)
+        }
+      }
+    })
+
+
+    </script>
+
+
+
 </body>
 </html>
